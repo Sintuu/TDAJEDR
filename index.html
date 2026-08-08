@@ -785,6 +785,49 @@
       font-weight: 600;
     }
 
+    .jm-jornada-block+.jm-jornada-block {
+      margin-top: 26px;
+    }
+
+    .jm-jornada-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line-strong);
+    }
+
+    .jm-jornada-title {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .jm-jornada-when {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-faint);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .jm-note {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--ink-faint);
+      text-align: center;
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px dashed var(--line-strong);
+      line-height: 1.7;
+    }
+
+    .jm-note strong {
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+
     .match-card .live-dot::after {
       content: '';
       position: absolute;
@@ -1503,42 +1546,78 @@
   <section id="partidas">
     <div class="section-head reveal">
       <h2>Próximas partidas</h2>
-      <p>Los enfrentamientos que definen quién sigue vivo en el torneo.</p>
+      <p>Jornada 1 y Jornada 2 se disputan el 10 de Agosto a las 19:00.</p>
     </div>
     <div class="matches-grid">
 
       <div class="match-card reveal">
-        <span class="stage">Fase de grupos &middot; Grupo A</span>
+        <span class="stage">Jornada 1 &middot; Grupo A</span>
+        <span class="when">10 Ago &middot; 19:00</span>
         <div class="match-players">
           <span class="p">Javi</span><span class="vs">vs</span><span class="p">Murad</span>
         </div>
       </div>
 
       <div class="match-card reveal">
-        <span class="stage">Fase de grupos &middot; Grupo A</span>
-        <div class="match-players">
-          <span class="p">Madi</span><span class="vs">vs</span><span class="p">Mier</span>
-        </div>
-      </div>
-
-      <div class="match-card reveal">
-        <span class="stage">Fase de grupos &middot; Grupo B</span>
+        <span class="stage">Jornada 1 &middot; Grupo B</span>
+        <span class="when">10 Ago &middot; 19:00</span>
         <div class="match-players">
           <span class="p">Juanki</span><span class="vs">vs</span><span class="p">Radin</span>
         </div>
       </div>
 
       <div class="match-card reveal">
-        <span class="stage">Fase de grupos &middot; Grupo B</span>
+        <span class="stage">Jornada 1 &middot; Grupo B</span>
+        <span class="when">10 Ago &middot; 19:00</span>
         <div class="match-players">
           <span class="p">Borja</span><span class="vs">vs</span><span class="p">Salva</span>
+        </div>
+      </div>
+
+      <div class="match-card reveal">
+        <span class="stage">Jornada 2 &middot; Grupo A</span>
+        <span class="when">10 Ago &middot; 19:00</span>
+        <div class="match-players">
+          <span class="p">Sebas</span><span class="vs">vs</span><span class="p">Murad</span>
+        </div>
+      </div>
+
+      <div class="match-card reveal">
+        <span class="stage">Jornada 2 &middot; Grupo A</span>
+        <span class="when">10 Ago &middot; 19:00</span>
+        <div class="match-players">
+          <span class="p">Javi</span><span class="vs">vs</span><span class="p">Mier</span>
+        </div>
+      </div>
+
+      <div class="match-card reveal">
+        <span class="stage">Jornada 2 &middot; Grupo B</span>
+        <span class="when">10 Ago &middot; 19:00</span>
+        <div class="match-players">
+          <span class="p">Giraud</span><span class="vs">vs</span><span class="p">Radin</span>
+        </div>
+      </div>
+
+      <div class="match-card reveal">
+        <span class="stage">Jornada 2 &middot; Grupo B</span>
+        <span class="when">10 Ago &middot; 19:00</span>
+        <div class="match-players">
+          <span class="p">Juanki</span><span class="vs">vs</span><span class="p">Salva</span>
+        </div>
+      </div>
+
+      <div class="match-card reveal">
+        <span class="stage">Jornada recuperativa &middot; Grupo A</span>
+        <span class="when">22 Ago</span>
+        <div class="match-players">
+          <span class="p">Madi</span><span class="vs">vs</span><span class="p">Mier</span>
         </div>
       </div>
 
     </div>
 
     <div class="matches-actions reveal">
-      <button class="view-all-btn" id="viewJornadaBtn">Ver todas las partidas de la jornada</button>
+      <button class="view-all-btn" id="viewJornadaBtn">Ver calendario completo de la fase de grupos</button>
     </div>
   </section>
 
@@ -1890,22 +1969,54 @@
   <div class="oc-modal-overlay" id="jornadaModalOverlay">
     <div class="oc-modal jm-modal">
       <div class="oc-modal-close" id="jornadaModalClose">&times;</div>
-      <h3>Jornada 1 &middot; Fase de grupos</h3>
-      <p class="jm-sub">Todas las partidas de esta jornada en ambos grupos.</p>
+      <h3>Calendario &middot; Fase de grupos</h3>
+      <p class="jm-sub">Todas las partidas de la fase de grupos, incluida la jornada recuperativa.</p>
 
-      <div class="jm-groups">
-        <div class="jm-group-block">
-          <div class="jm-group-label">Grupo A</div>
-          <div class="jm-match-row"><span>Javi</span><span class="jm-vs">vs</span><span>Murad</span></div>
-          <div class="jm-match-row"><span>Madi</span><span class="jm-vs">vs</span><span>Mier</span></div>
-          <div class="jm-bye">No juega esta jornada: <strong>Sebas</strong></div>
+      <div class="jm-jornada-block">
+        <div class="jm-jornada-header">
+          <span class="jm-jornada-title">Jornada 1</span>
+          <span class="jm-jornada-when">10 Ago &middot; 19:00</span>
         </div>
-        <div class="jm-group-block">
-          <div class="jm-group-label">Grupo B</div>
-          <div class="jm-match-row"><span>Juanki</span><span class="jm-vs">vs</span><span>Radin</span></div>
-          <div class="jm-match-row"><span>Borja</span><span class="jm-vs">vs</span><span>Salva</span></div>
-          <div class="jm-bye">No juega esta jornada: <strong>Giraud</strong></div>
+        <div class="jm-groups">
+          <div class="jm-group-block">
+            <div class="jm-group-label">Grupo A</div>
+            <div class="jm-match-row"><span>Javi</span><span class="jm-vs">vs</span><span>Murad</span></div>
+            <div class="jm-bye">No juegan esta jornada: <strong>Madi &amp; Mier</strong> (aplazada a la
+              jornada recuperativa) &middot; <strong>Sebas</strong> descansa</div>
+          </div>
+          <div class="jm-group-block">
+            <div class="jm-group-label">Grupo B</div>
+            <div class="jm-match-row"><span>Juanki</span><span class="jm-vs">vs</span><span>Radin</span></div>
+            <div class="jm-match-row"><span>Borja</span><span class="jm-vs">vs</span><span>Salva</span></div>
+            <div class="jm-bye">No juega esta jornada: <strong>Giraud</strong></div>
+          </div>
         </div>
+      </div>
+
+      <div class="jm-jornada-block">
+        <div class="jm-jornada-header">
+          <span class="jm-jornada-title">Jornada 2</span>
+          <span class="jm-jornada-when">10 Ago &middot; 19:00</span>
+        </div>
+        <div class="jm-groups">
+          <div class="jm-group-block">
+            <div class="jm-group-label">Grupo A</div>
+            <div class="jm-match-row"><span>Sebas</span><span class="jm-vs">vs</span><span>Murad</span></div>
+            <div class="jm-match-row"><span>Javi</span><span class="jm-vs">vs</span><span>Mier</span></div>
+            <div class="jm-bye">No juega esta jornada: <strong>Madi</strong></div>
+          </div>
+          <div class="jm-group-block">
+            <div class="jm-group-label">Grupo B</div>
+            <div class="jm-match-row"><span>Giraud</span><span class="jm-vs">vs</span><span>Radin</span></div>
+            <div class="jm-match-row"><span>Juanki</span><span class="jm-vs">vs</span><span>Salva</span></div>
+            <div class="jm-bye">No juega esta jornada: <strong>Borja</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="jm-note">
+        <strong>Jornadas 3, 4 y 5</strong> se disputan el 22 de Agosto.<br>
+        Ese mismo día, en jornada recuperativa, se juega <strong>Madi vs Mier</strong> (aplazada de la Jornada 1).
       </div>
     </div>
   </div>
@@ -1958,16 +2069,16 @@
     })();
 
     const players = [
-      { name: "Sebas", initials: "SE", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "Descansa esta jornada", w: 0, l: 0 },
-      { name: "Javi", initials: "JA", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Murad — Fase de grupos", w: 0, l: 0 },
-      { name: "Madi", initials: "MA", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Mier — Fase de grupos", w: 0, l: 0 },
-      { name: "Mier", initials: "MI", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Madi — Fase de grupos", w: 0, l: 0 },
-      { name: "Murad", initials: "MU", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Javi — Fase de grupos", w: 0, l: 0 },
-      { name: "Giraud", initials: "GI", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "Descansa esta jornada", w: 0, l: 0 },
-      { name: "Juanki", initials: "JU", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Radin — Fase de grupos", w: 0, l: 0 },
-      { name: "Borja", initials: "BO", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Salva — Fase de grupos", w: 0, l: 0 },
-      { name: "Salva", initials: "SA", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Borja — Fase de grupos", w: 0, l: 0 },
-      { name: "Radin", initials: "RA", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Juanki — Fase de grupos", w: 0, l: 0 },
+      { name: "Sebas", initials: "SE", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Murad — Jornada 2 (10 Ago, 19:00)", w: 0, l: 0 },
+      { name: "Javi", initials: "JA", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Murad — Jornada 1 (10 Ago, 19:00)", w: 0, l: 0 },
+      { name: "Madi", initials: "MA", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Mier — Jornada recuperativa (22 Ago)", w: 0, l: 0 },
+      { name: "Mier", initials: "MI", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Madi — Jornada recuperativa (22 Ago)", w: 0, l: 0 },
+      { name: "Murad", initials: "MU", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Javi — Jornada 1 (10 Ago, 19:00)", w: 0, l: 0 },
+      { name: "Giraud", initials: "GI", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Radin — Jornada 2 (10 Ago, 19:00)", w: 0, l: 0 },
+      { name: "Juanki", initials: "JU", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Radin — Jornada 1 (10 Ago, 19:00)", w: 0, l: 0 },
+      { name: "Borja", initials: "BO", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Salva — Jornada 1 (10 Ago, 19:00)", w: 0, l: 0 },
+      { name: "Salva", initials: "SA", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Borja — Jornada 1 (10 Ago, 19:00)", w: 0, l: 0 },
+      { name: "Radin", initials: "RA", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Juanki — Jornada 1 (10 Ago, 19:00)", w: 0, l: 0 },
     ];
 
     const grid = document.getElementById('pgrid');
