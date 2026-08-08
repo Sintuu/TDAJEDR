@@ -288,6 +288,25 @@
       animation: fadeUp .9s ease .4s forwards;
     }
 
+    .hero-format {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .04em;
+      color: var(--ink-faint);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 16px;
+      margin-top: 22px;
+      opacity: 0;
+      animation: fadeUp .9s ease .5s forwards;
+    }
+
+    .hero-format strong {
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -1471,6 +1490,8 @@
     <h1>El torneo<br><em>de ajedrez</em></h1>
     <p class="sub">Diez jugadores, dos grupos y un camino de doble eliminación hasta la corona. Sigue cada jaque, cada
       partida y cada eliminación en tiempo real.</p>
+    <p class="hero-format">Formato de tiempo: <strong>10+5</strong> — 10 minutos por jugador con 5 segundos de
+      incremento por jugada</p>
     <div class="hero-menu">
       <a href="#partidas">Próximas partidas</a>
       <a href="#clasificacion">Clasificación</a>
