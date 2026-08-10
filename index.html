@@ -640,6 +640,31 @@
       background: var(--accent);
     }
 
+    .match-card.finished .stage {
+      color: var(--ink-faint);
+    }
+
+    .match-players .p.win {
+      color: var(--win);
+    }
+
+    .match-players .p.lose {
+      color: var(--lose);
+      font-weight: 500;
+    }
+
+    .match-result {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--ink-faint);
+      text-align: center;
+    }
+
+    .match-result strong {
+      color: var(--win);
+      font-weight: 600;
+    }
+
     /* ---------- theme toggle ---------- */
     .theme-toggle {
       position: fixed;
@@ -768,6 +793,15 @@
       font-size: 11px;
       font-weight: 500;
       color: var(--ink-faint);
+    }
+
+    .jm-match-row .win {
+      color: var(--win);
+    }
+
+    .jm-match-row .lose {
+      color: var(--lose);
+      font-weight: 500;
     }
 
     .jm-bye {
@@ -1558,28 +1592,31 @@
         </div>
       </div>
 
-      <div class="match-card reveal">
-        <span class="stage">Jornada 1 &middot; Grupo B</span>
+      <div class="match-card finished reveal">
+        <span class="stage">Jornada 1 &middot; Grupo B &middot; Finalizada</span>
         <span class="when">10 Ago &middot; 19:00</span>
         <div class="match-players">
-          <span class="p">Juanki</span><span class="vs">vs</span><span class="p">Radin</span>
+          <span class="p win">Juanki</span><span class="vs">vs</span><span class="p lose">Radin</span>
         </div>
+        <div class="match-result">Gana <strong>Juanki</strong></div>
       </div>
 
-      <div class="match-card reveal">
-        <span class="stage">Jornada 1 &middot; Grupo B</span>
+      <div class="match-card finished reveal">
+        <span class="stage">Jornada 1 &middot; Grupo B &middot; Finalizada</span>
         <span class="when">10 Ago &middot; 19:00</span>
         <div class="match-players">
-          <span class="p">Borja</span><span class="vs">vs</span><span class="p">Salva</span>
+          <span class="p win">Borja</span><span class="vs">vs</span><span class="p lose">Salva</span>
         </div>
+        <div class="match-result">Gana <strong>Borja</strong></div>
       </div>
 
-      <div class="match-card reveal">
-        <span class="stage">Jornada 2 &middot; Grupo A</span>
+      <div class="match-card finished reveal">
+        <span class="stage">Jornada 2 &middot; Grupo A &middot; Finalizada</span>
         <span class="when">10 Ago &middot; 19:00</span>
         <div class="match-players">
-          <span class="p">Sebas</span><span class="vs">vs</span><span class="p">Murad</span>
+          <span class="p lose">Sebas</span><span class="vs">vs</span><span class="p win">Murad</span>
         </div>
+        <div class="match-result">Gana <strong>Murad</strong></div>
       </div>
 
       <div class="match-card reveal">
@@ -1590,20 +1627,22 @@
         </div>
       </div>
 
-      <div class="match-card reveal">
-        <span class="stage">Jornada 2 &middot; Grupo B</span>
+      <div class="match-card finished reveal">
+        <span class="stage">Jornada 2 &middot; Grupo B &middot; Finalizada</span>
         <span class="when">10 Ago &middot; 19:00</span>
         <div class="match-players">
-          <span class="p">Giraud</span><span class="vs">vs</span><span class="p">Radin</span>
+          <span class="p win">Giraud</span><span class="vs">vs</span><span class="p lose">Radin</span>
         </div>
+        <div class="match-result">Gana <strong>Giraud</strong></div>
       </div>
 
-      <div class="match-card reveal">
-        <span class="stage">Jornada 2 &middot; Grupo B</span>
+      <div class="match-card finished reveal">
+        <span class="stage">Jornada 2 &middot; Grupo B &middot; Finalizada</span>
         <span class="when">10 Ago &middot; 19:00</span>
         <div class="match-players">
-          <span class="p">Juanki</span><span class="vs">vs</span><span class="p">Salva</span>
+          <span class="p lose">Juanki</span><span class="vs">vs</span><span class="p win">Salva</span>
         </div>
+        <div class="match-result">Gana <strong>Salva</strong></div>
       </div>
 
       <div class="match-card reveal">
@@ -1656,7 +1695,7 @@
               <tr>
                 <td class="name">Sebas</td>
                 <td class="num">0</td>
-                <td class="num">0</td>
+                <td class="num">1</td>
                 <td class="num">0</td>
               </tr>
               <tr>
@@ -1673,9 +1712,9 @@
               </tr>
               <tr>
                 <td class="name">Murad</td>
+                <td class="num">1</td>
                 <td class="num">0</td>
-                <td class="num">0</td>
-                <td class="num">0</td>
+                <td class="num">1</td>
               </tr>
             </tbody>
           </table>
@@ -1694,33 +1733,33 @@
             </thead>
             <tbody>
               <tr>
-                <td class="name">Juanki</td>
-                <td class="num">0</td>
-                <td class="num">0</td>
-                <td class="num">0</td>
-              </tr>
-              <tr>
                 <td class="name">Giraud</td>
+                <td class="num">1</td>
                 <td class="num">0</td>
-                <td class="num">0</td>
-                <td class="num">0</td>
+                <td class="num">1</td>
               </tr>
               <tr>
                 <td class="name">Borja</td>
+                <td class="num">1</td>
                 <td class="num">0</td>
-                <td class="num">0</td>
-                <td class="num">0</td>
+                <td class="num">1</td>
+              </tr>
+              <tr>
+                <td class="name">Juanki</td>
+                <td class="num">1</td>
+                <td class="num">1</td>
+                <td class="num">1</td>
               </tr>
               <tr>
                 <td class="name">Salva</td>
-                <td class="num">0</td>
-                <td class="num">0</td>
-                <td class="num">0</td>
+                <td class="num">1</td>
+                <td class="num">1</td>
+                <td class="num">1</td>
               </tr>
               <tr>
                 <td class="name">Radin</td>
                 <td class="num">0</td>
-                <td class="num">0</td>
+                <td class="num">2</td>
                 <td class="num">0</td>
               </tr>
             </tbody>
@@ -1745,6 +1784,46 @@
           <tbody>
             <tr>
               <td class="pos">1</td>
+              <td class="name">Murad</td>
+              <td class="grp">Grupo A</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td class="num pts">1</td>
+            </tr>
+            <tr>
+              <td class="pos">1</td>
+              <td class="name">Giraud</td>
+              <td class="grp">Grupo B</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td class="num pts">1</td>
+            </tr>
+            <tr>
+              <td class="pos">1</td>
+              <td class="name">Borja</td>
+              <td class="grp">Grupo B</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td class="num pts">1</td>
+            </tr>
+            <tr>
+              <td class="pos">1</td>
+              <td class="name">Juanki</td>
+              <td class="grp">Grupo B</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num pts">1</td>
+            </tr>
+            <tr>
+              <td class="pos">1</td>
+              <td class="name">Salva</td>
+              <td class="grp">Grupo B</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num pts">1</td>
+            </tr>
+            <tr>
+              <td class="pos">6</td>
               <td class="name">Javi</td>
               <td class="grp">Grupo A</td>
               <td class="num">0</td>
@@ -1752,15 +1831,7 @@
               <td class="num pts">0</td>
             </tr>
             <tr>
-              <td class="pos">1</td>
-              <td class="name">Sebas</td>
-              <td class="grp">Grupo A</td>
-              <td class="num">0</td>
-              <td class="num">0</td>
-              <td class="num pts">0</td>
-            </tr>
-            <tr>
-              <td class="pos">1</td>
+              <td class="pos">6</td>
               <td class="name">Madi</td>
               <td class="grp">Grupo A</td>
               <td class="num">0</td>
@@ -1768,7 +1839,7 @@
               <td class="num pts">0</td>
             </tr>
             <tr>
-              <td class="pos">1</td>
+              <td class="pos">6</td>
               <td class="name">Mier</td>
               <td class="grp">Grupo A</td>
               <td class="num">0</td>
@@ -1776,51 +1847,19 @@
               <td class="num pts">0</td>
             </tr>
             <tr>
-              <td class="pos">1</td>
-              <td class="name">Murad</td>
+              <td class="pos">6</td>
+              <td class="name">Sebas</td>
               <td class="grp">Grupo A</td>
               <td class="num">0</td>
-              <td class="num">0</td>
+              <td class="num">1</td>
               <td class="num pts">0</td>
             </tr>
             <tr>
-              <td class="pos">1</td>
-              <td class="name">Juanki</td>
-              <td class="grp">Grupo B</td>
-              <td class="num">0</td>
-              <td class="num">0</td>
-              <td class="num pts">0</td>
-            </tr>
-            <tr>
-              <td class="pos">1</td>
-              <td class="name">Giraud</td>
-              <td class="grp">Grupo B</td>
-              <td class="num">0</td>
-              <td class="num">0</td>
-              <td class="num pts">0</td>
-            </tr>
-            <tr>
-              <td class="pos">1</td>
-              <td class="name">Borja</td>
-              <td class="grp">Grupo B</td>
-              <td class="num">0</td>
-              <td class="num">0</td>
-              <td class="num pts">0</td>
-            </tr>
-            <tr>
-              <td class="pos">1</td>
-              <td class="name">Salva</td>
-              <td class="grp">Grupo B</td>
-              <td class="num">0</td>
-              <td class="num">0</td>
-              <td class="num pts">0</td>
-            </tr>
-            <tr>
-              <td class="pos">1</td>
+              <td class="pos">6</td>
               <td class="name">Radin</td>
               <td class="grp">Grupo B</td>
               <td class="num">0</td>
-              <td class="num">0</td>
+              <td class="num">2</td>
               <td class="num pts">0</td>
             </tr>
           </tbody>
@@ -1986,8 +2025,8 @@
           </div>
           <div class="jm-group-block">
             <div class="jm-group-label">Grupo B</div>
-            <div class="jm-match-row"><span>Juanki</span><span class="jm-vs">vs</span><span>Radin</span></div>
-            <div class="jm-match-row"><span>Borja</span><span class="jm-vs">vs</span><span>Salva</span></div>
+            <div class="jm-match-row"><span class="win">Juanki</span><span class="jm-vs">vs</span><span class="lose">Radin</span></div>
+            <div class="jm-match-row"><span class="win">Borja</span><span class="jm-vs">vs</span><span class="lose">Salva</span></div>
             <div class="jm-bye">No juega esta jornada: <strong>Giraud</strong></div>
           </div>
         </div>
@@ -2001,14 +2040,14 @@
         <div class="jm-groups">
           <div class="jm-group-block">
             <div class="jm-group-label">Grupo A</div>
-            <div class="jm-match-row"><span>Sebas</span><span class="jm-vs">vs</span><span>Murad</span></div>
+            <div class="jm-match-row"><span class="lose">Sebas</span><span class="jm-vs">vs</span><span class="win">Murad</span></div>
             <div class="jm-match-row"><span>Javi</span><span class="jm-vs">vs</span><span>Mier</span></div>
             <div class="jm-bye">No juega esta jornada: <strong>Madi</strong></div>
           </div>
           <div class="jm-group-block">
             <div class="jm-group-label">Grupo B</div>
-            <div class="jm-match-row"><span>Giraud</span><span class="jm-vs">vs</span><span>Radin</span></div>
-            <div class="jm-match-row"><span>Juanki</span><span class="jm-vs">vs</span><span>Salva</span></div>
+            <div class="jm-match-row"><span class="win">Giraud</span><span class="jm-vs">vs</span><span class="lose">Radin</span></div>
+            <div class="jm-match-row"><span class="lose">Juanki</span><span class="jm-vs">vs</span><span class="win">Salva</span></div>
             <div class="jm-bye">No juega esta jornada: <strong>Borja</strong></div>
           </div>
         </div>
@@ -2144,16 +2183,16 @@
     })();
 
     const players = [
-      { name: "Sebas", initials: "SE", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Madi — Jornada 3 (22 Ago)", w: 0, l: 0 },
+      { name: "Sebas", initials: "SE", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Madi — Jornada 3 (22 Ago)", w: 0, l: 1 },
       { name: "Javi", initials: "JA", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "Descansa — Jornada 3 (22 Ago)", w: 0, l: 0 },
       { name: "Madi", initials: "MA", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Mier — Jornada recuperativa (22 Ago)", w: 0, l: 0 },
       { name: "Mier", initials: "MI", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Madi — Jornada recuperativa (22 Ago)", w: 0, l: 0 },
-      { name: "Murad", initials: "MU", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Mier — Jornada 3 (22 Ago)", w: 0, l: 0 },
-      { name: "Giraud", initials: "GI", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Borja — Jornada 3 (22 Ago)", w: 0, l: 0 },
-      { name: "Juanki", initials: "JU", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "Descansa — Jornada 3 (22 Ago)", w: 0, l: 0 },
-      { name: "Borja", initials: "BO", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Giraud — Jornada 3 (22 Ago)", w: 0, l: 0 },
-      { name: "Salva", initials: "SA", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Radin — Jornada 3 (22 Ago)", w: 0, l: 0 },
-      { name: "Radin", initials: "RA", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Salva — Jornada 3 (22 Ago)", w: 0, l: 0 },
+      { name: "Murad", initials: "MU", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Mier — Jornada 3 (22 Ago)", w: 1, l: 0 },
+      { name: "Giraud", initials: "GI", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Borja — Jornada 3 (22 Ago)", w: 1, l: 0 },
+      { name: "Juanki", initials: "JU", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "Descansa — Jornada 3 (22 Ago)", w: 1, l: 1 },
+      { name: "Borja", initials: "BO", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Giraud — Jornada 3 (22 Ago)", w: 1, l: 0 },
+      { name: "Salva", initials: "SA", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Radin — Jornada 3 (22 Ago)", w: 1, l: 1 },
+      { name: "Radin", initials: "RA", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Salva — Jornada 3 (22 Ago)", w: 0, l: 2 },
     ];
 
     const grid = document.getElementById('pgrid');
