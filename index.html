@@ -1605,14 +1605,6 @@
       </div>
 
       <div class="match-card reveal">
-        <span class="stage">Jornada recuperativa &middot; Grupo A</span>
-        <span class="when">12 Ago</span>
-        <div class="match-players">
-          <span class="p">Mier</span><span class="vs">vs</span><span class="p">Sebas</span>
-        </div>
-      </div>
-
-      <div class="match-card reveal">
         <span class="stage">Jornada 3 &middot; Grupo A</span>
         <span class="when">22 Ago</span>
         <div class="match-players">
@@ -1673,21 +1665,21 @@
                 <td class="pos">2</td>
                 <td class="name">Mier</td>
                 <td class="num">1</td>
-                <td class="num">0</td>
+                <td class="num">1</td>
                 <td class="num">1</td>
               </tr>
               <tr>
                 <td class="pos">3</td>
-                <td class="name">Madi</td>
-                <td class="num">0</td>
-                <td class="num">0</td>
-                <td class="num">0</td>
+                <td class="name">Sebas</td>
+                <td class="num">1</td>
+                <td class="num">1</td>
+                <td class="num">1</td>
               </tr>
               <tr>
                 <td class="pos">4</td>
-                <td class="name">Sebas</td>
+                <td class="name">Madi</td>
                 <td class="num">0</td>
-                <td class="num">1</td>
+                <td class="num">0</td>
                 <td class="num">0</td>
               </tr>
               <tr>
@@ -1798,7 +1790,15 @@
               <td class="name">Mier</td>
               <td class="grp">Grupo A</td>
               <td class="num">1</td>
-              <td class="num">0</td>
+              <td class="num">1</td>
+              <td class="num pts">1</td>
+            </tr>
+            <tr>
+              <td class="pos">2</td>
+              <td class="name">Sebas</td>
+              <td class="grp">Grupo A</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
               <td class="num pts">1</td>
             </tr>
             <tr>
@@ -1818,7 +1818,7 @@
               <td class="num pts">1</td>
             </tr>
             <tr>
-              <td class="pos">7</td>
+              <td class="pos">8</td>
               <td class="name">Madi</td>
               <td class="grp">Grupo A</td>
               <td class="num">0</td>
@@ -1826,15 +1826,7 @@
               <td class="num pts">0</td>
             </tr>
             <tr>
-              <td class="pos">7</td>
-              <td class="name">Sebas</td>
-              <td class="grp">Grupo A</td>
-              <td class="num">0</td>
-              <td class="num">1</td>
-              <td class="num pts">0</td>
-            </tr>
-            <tr>
-              <td class="pos">7</td>
+              <td class="pos">8</td>
               <td class="name">Javi</td>
               <td class="grp">Grupo A</td>
               <td class="num">0</td>
@@ -1842,7 +1834,7 @@
               <td class="num pts">0</td>
             </tr>
             <tr>
-              <td class="pos">7</td>
+              <td class="pos">8</td>
               <td class="name">Radin</td>
               <td class="grp">Grupo B</td>
               <td class="num">0</td>
@@ -2055,7 +2047,7 @@
             <div class="jm-group-label">Grupo A</div>
             <div class="jm-match-row"><span class="lose">Javi</span><span class="jm-vs">vs</span><span
                 class="win">Mier</span></div>
-            <div class="jm-match-row"><span>Mier</span><span class="jm-vs">vs</span><span>Sebas</span></div>
+            <div class="jm-match-row"><span class="lose">Mier</span><span class="jm-vs">vs</span><span class="win">Sebas</span></div>
           </div>
         </div>
       </div>
@@ -2189,10 +2181,10 @@
     })();
 
     const players = [
-      { name: "Sebas", initials: "SE", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Mier — Jornada recuperativa (12 Ago)", w: 0, l: 1 },
+      { name: "Sebas", initials: "SE", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Madi — Jornada 3 (22 Ago)", w: 1, l: 1 },
       { name: "Javi", initials: "JA", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Madi — Jornada 4 (22 Ago)", w: 0, l: 2 },
-      { name: "Madi", initials: "MA", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Mier — Jornada recuperativa (12 Ago)", w: 0, l: 0 },
-      { name: "Mier", initials: "MI", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Madi y Sebas — Jornada recuperativa (12 Ago)", w: 1, l: 0 },
+      { name: "Madi", initials: "MA", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Mier — Jornada recuperativa (22 Ago)", w: 0, l: 0 },
+      { name: "Mier", initials: "MI", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Madi — Jornada recuperativa (22 Ago)", w: 1, l: 1 },
       { name: "Murad", initials: "MU", group: "Grupo A", status: "Fase de grupos", tag: "groups", next: "vs Mier — Jornada 3 (22 Ago)", w: 2, l: 0 },
       { name: "Giraud", initials: "GI", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "vs Borja — Jornada 3 (22 Ago)", w: 1, l: 0 },
       { name: "Juanki", initials: "JU", group: "Grupo B", status: "Fase de grupos", tag: "groups", next: "Descansa — Jornada 3 (22 Ago)", w: 1, l: 1 },
